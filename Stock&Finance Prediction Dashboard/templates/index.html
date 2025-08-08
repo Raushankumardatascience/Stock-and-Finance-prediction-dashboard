@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuantumAnalytics | Stock Prediction Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1d4ed8 100%);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans">
+  <!-- Navigation -->
+  <nav class="gradient-bg text-white shadow-lg border-b border-blue-700">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center">
+          <i class="fas fa-chart-line text-blue-800"></i>
+        </div>
+        <span class="text-xl font-bold">QuantumAnalytics</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 py-6">
+    <h2 class="text-2xl font-bold mb-4">📈 Stock & Finance Prediction Dashboard</h2>
+    <form method="POST" action="/predict" class="mb-6 p-6 bg-white rounded-lg shadow-md">
+      <div class="mb-4">
+        <label class="block text-sm text-gray-600 mb-1">Stock Ticker:</label>
+        <input type="text" name="ticker" placeholder="e.g., AAPL" required class="py-2 px-4 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-sm text-gray-600 mb-1">Select Prediction Model:</label>
+        <select name="model" required class="py-2 px-4 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="">-- Choose a Model --</option>
+          <option value="arima">ARIMA</option>
+          <option value="lstm">LSTM</option>
+          <option value="best">XGBoost</option>
+          <option value="rf">Random Forest</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-sm text-gray-600 mb-1">Forecast Days:</label>
+        <input type="number" name="forecast_days" placeholder="e.g., 7" min="1" max="30" value="7" class="py-2 px-4 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <input type="submit" value="Predict" class="mt-4 bg-blue-600 text-white py-2 px-4 rounded-md cursor-pointer hover:bg-blue-700 transition duration-300 ease-in-out">
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="gradient-bg text-white py-8 mt-12">
+    <div class="container mx-auto px-4 text-center">
+      © 2025 QuantumAnalytics. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
