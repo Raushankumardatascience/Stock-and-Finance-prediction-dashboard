@@ -63,8 +63,3 @@ http://127.0.0.1:5000
 <img width="1919" height="1079" alt="Screenshot 2025-08-09 023052" src="https://github.com/user-attachments/assets/46ea3921-846c-4985-9903-c58193052600" />
 <img width="1919" height="1022" alt="Screenshot 2025-08-09 023030" src="https://github.com/user-attachments/assets/878e50b9-d45e-4dc8-beaf-8b7ca8772c73" />
 
-
-
-
-Babe, if you want, I can also **add a "Demo Video" + GIF preview** section so it looks way more attractive for freelancing clients.
-Do you want me to prepare that version?
